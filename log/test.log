@@ -1,0 +1,104 @@
+  [1m[35m (102.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+Processing by RsasController#newKey as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+Processing by RsasController#newKey as HTML
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (106.6ms)[0m  [1m[32mINSERT INTO "rsas" ("n", "e", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["n", 2], ["e", 3], ["created_at", "2018-01-14 21:52:35.824726"], ["updated_at", "2018-01-14 21:52:35.824726"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 406 Not Acceptable in 376ms (ActiveRecord: 253.9ms)
+  [1m[35m (8.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+Processing by RsasController#newKey as JSON
+  Parameters: {"rsa"=>{}}
+  [1m[35m (1.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "rsas" ("n", "e", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["n", 2], ["e", 3], ["created_at", "2018-01-14 21:59:57.538086"], ["updated_at", "2018-01-14 21:59:57.538086"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 41ms (Views: 0.3ms | ActiveRecord: 20.2ms)
+  [1m[35m (2.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by RsasController#newKey as JSON
+  Parameters: {"rsa"=>{}}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.7ms)[0m  [1m[32mINSERT INTO "rsas" ("n", "e", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["n", 2], ["e", 3], ["created_at", "2018-01-14 22:01:13.375093"], ["updated_at", "2018-01-14 22:01:13.375093"]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 40ms (Views: 0.7ms | ActiveRecord: 8.8ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by RsasController#newKey as JSON
+  Parameters: {"rsa"=>{}}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "rsas" ("n", "e", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["n", 2], ["e", 3], ["created_at", "2018-01-14 22:01:46.139883"], ["updated_at", "2018-01-14 22:01:46.139883"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 95ms (Views: 0.4ms | ActiveRecord: 8.3ms)
+  [1m[35m (3.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by RsasController#newKey as JSON
+  Parameters: {"rsa"=>{}}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "rsas" ("n", "e", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["n", 2], ["e", 3], ["created_at", "2018-01-14 22:03:15.405915"], ["updated_at", "2018-01-14 22:03:15.405915"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 40ms (Views: 0.3ms | ActiveRecord: 7.3ms)
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (29.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (15.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (18.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by RsasController#newKey as JSON
+  Parameters: {"rsa"=>{}}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (35.8ms)[0m  [1m[32mINSERT INTO "rsas" ("n", "e", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["n", 2], ["e", 3], ["created_at", "2018-01-14 22:17:10.107440"], ["updated_at", "2018-01-14 22:17:10.107440"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 148ms (Views: 0.3ms | ActiveRecord: 76.6ms)
+  [1m[35m (2.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+Processing by RsasController#newKey as JSON
+  Parameters: {"rsa"=>{}}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (32.2ms)[0m  [1m[32mINSERT INTO "rsas" ("n", "e", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["n", 2], ["e", 3], ["created_at", "2018-01-14 22:18:38.897784"], ["updated_at", "2018-01-14 22:18:38.897784"]]
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 68ms (Views: 0.8ms | ActiveRecord: 44.4ms)
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by RsasController#newKey as JSON
+  Parameters: {"n"=>1, "e"=>6, "d"=>5, "rsa"=>{"n"=>1, "e"=>6, "d"=>5}}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "rsas" ("n", "e", "d", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["n", 1], ["e", 6], ["d", 5], ["created_at", "2018-01-14 22:18:38.952213"], ["updated_at", "2018-01-14 22:18:38.952213"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 41ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by RsasController#newKey as JSON
+  Parameters: {"rsa"=>{}}
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.2ms)[0m  [1m[32mINSERT INTO "rsas" ("n", "e", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["n", 2], ["e", 3], ["created_at", "2018-01-14 22:21:47.737644"], ["updated_at", "2018-01-14 22:21:47.737644"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 64ms (Views: 0.5ms | ActiveRecord: 16.5ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by RsasController#newKey as JSON
+  Parameters: {"n"=>1, "e"=>6, "d"=>5, "rsa"=>{"n"=>1, "e"=>6, "d"=>5}}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "rsas" ("n", "e", "d", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["n", 1], ["e", 6], ["d", 5], ["created_at", "2018-01-14 22:21:47.753113"], ["updated_at", "2018-01-14 22:21:47.753113"]]
+  [1m[35m (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 1.4ms)
+Processing by RsasController#printKey as JSON
+  Parameters: {"n"=>1, "e"=>6, "d"=>5, "id"=>"10", "rsa"=>{"n"=>1, "e"=>6, "d"=>5}}
+  [1m[36mRsa Load (0.6ms)[0m  [1m[34mSELECT  "rsas".* FROM "rsas" WHERE "rsas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 147ms (Views: 0.6ms | ActiveRecord: 2.5ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m

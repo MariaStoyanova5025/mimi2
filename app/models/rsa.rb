@@ -1,0 +1,3 @@
+class Rsa < ApplicationRecord
+
+end
