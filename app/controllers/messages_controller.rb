@@ -21,9 +21,9 @@ protect_from_forgery with: :null_session
   # GET /messages/1/edit
   def edit
   end
-  def encrypt message a
+  def encrypt (message, a)
 	rsa = Rsa.find_by id:a
-	
+	p rsa 
 	i = 0
 	c = []
 	loop do
@@ -36,7 +36,7 @@ protect_from_forgery with: :null_session
    end
 
 	def encryptMessages
-		ogmsg = encrypt(params[:message], :params[:id])
+		ogmsg = encrypt(params[:message], params[:id].to_i)
 		@msg = Message.new({message:ogmsg,ind:params[:id]})
 		@msg.save 
 		respond_to do |format| 
@@ -49,7 +49,7 @@ protect_from_forgery with: :null_session
         		format.json {render json: {'message' => @msg.message}}
       		end
 	end
-	def decrypt message a
+	def decrypt (message, a)
 	rsa = Rsa.find_by id:a
     i = 0
 	c = message.split(",")
@@ -63,7 +63,7 @@ protect_from_forgery with: :null_session
 	mg
    end 
 	def decryptMessages
-		enmsg = decrypt(params[:message], :params[:id])
+		enmsg = decrypt(params[:message], params[:id].to_i)
 		respond_to do |format| 
         		format.json {render json: {'message' => enmsg}}
       		end

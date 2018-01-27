@@ -32,3 +32,196 @@ Migrating to CreateMessages (20171219210348)
   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3660263431675810155)[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (10.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3660263431675810155)[0m
+  [1m[35m (26.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (20.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(3660263431675810155)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/" for 127.0.0.1 at 2018-01-27 06:00:19 -0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/rsas" for 127.0.0.1 at 2018-01-27 06:00:54 -0800
+Processing by RsasController#create as */*
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: rsa):
+  
+app/controllers/rsas_controller.rb:161:in `rsa_params'
+app/controllers/rsas_controller.rb:116:in `create'
+Started POST "/rsas" for 127.0.0.1 at 2018-01-27 06:04:55 -0800
+Processing by RsasController#create as */*
+Can't verify CSRF token authenticity.
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (93.7ms)[0m  [1m[32mINSERT INTO "rsas" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2018-01-27 14:05:05.655089"], ["updated_at", "2018-01-27 14:05:05.655089"]]
+  [1m[35m (43.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/rsas/11
+Completed 302 Found in 186ms (ActiveRecord: 145.5ms)
+
+
+Started POST "/rsas/11/encrypt" for 127.0.0.1 at 2018-01-27 06:05:52 -0800
+  
+ActionController::RoutingError (No route matches [POST] "/rsas/11/encrypt"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/rsas/11/encrypt_messages?message=hello" for 127.0.0.1 at 2018-01-27 06:06:46 -0800
+Processing by MessagesController#encryptMessages as */*
+  Parameters: {"message"=>"hello", "id"=>"11"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/messages_controller.rb:39:in `[]'
+app/controllers/messages_controller.rb:39:in `encryptMessages'
+Started POST "/rsas/11/encrypt_messages?message=hello" for 127.0.0.1 at 2018-01-27 06:09:36 -0800
+Processing by MessagesController#encryptMessages as */*
+  Parameters: {"message"=>"hello", "id"=>"11"}
+Can't verify CSRF token authenticity.
+  [1m[36mRsa Load (0.9ms)[0m  [1m[34mSELECT  "rsas".* FROM "rsas" WHERE "rsas"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 1.7ms)
+
+
+  
+TypeError (nil can't be coerced into Fixnum):
+  
+app/controllers/messages_controller.rb:31:in `**'
+app/controllers/messages_controller.rb:31:in `block in encrypt'
+app/controllers/messages_controller.rb:29:in `loop'
+app/controllers/messages_controller.rb:29:in `encrypt'
+app/controllers/messages_controller.rb:39:in `encryptMessages'
+Started POST "/rsas/11/encrypt_messages?message=hello" for 127.0.0.1 at 2018-01-27 06:14:07 -0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MessagesController#encryptMessages as */*
+  Parameters: {"message"=>"hello", "id"=>"11"}
+Can't verify CSRF token authenticity.
+  [1m[36mRsa Load (1.9ms)[0m  [1m[34mSELECT  "rsas".* FROM "rsas" WHERE "rsas"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 17.3ms)
+
+
+  
+TypeError (nil can't be coerced into Fixnum):
+  
+app/controllers/messages_controller.rb:31:in `**'
+app/controllers/messages_controller.rb:31:in `block in encrypt'
+app/controllers/messages_controller.rb:29:in `loop'
+app/controllers/messages_controller.rb:29:in `encrypt'
+app/controllers/messages_controller.rb:39:in `encryptMessages'
+Started POST "/rsas/?n=3233" for 127.0.0.1 at 2018-01-27 06:17:15 -0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RsasController#create as */*
+  Parameters: {"n"=>"3233"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "rsas" ("n", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["n", 3233], ["created_at", "2018-01-27 14:17:15.806487"], ["updated_at", "2018-01-27 14:17:15.806487"]]
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/rsas/12
+Completed 302 Found in 71ms (ActiveRecord: 15.4ms)
+
+
+Started POST "/rsas/12/encrypt_messages?message=hello" for 127.0.0.1 at 2018-01-27 06:17:54 -0800
+Processing by MessagesController#encryptMessages as */*
+  Parameters: {"message"=>"hello", "id"=>"12"}
+Can't verify CSRF token authenticity.
+  [1m[36mRsa Load (0.7ms)[0m  [1m[34mSELECT  "rsas".* FROM "rsas" WHERE "rsas"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 21.9ms)
+
+
+  
+TypeError (nil can't be coerced into Fixnum):
+  
+app/controllers/messages_controller.rb:31:in `**'
+app/controllers/messages_controller.rb:31:in `block in encrypt'
+app/controllers/messages_controller.rb:29:in `loop'
+app/controllers/messages_controller.rb:29:in `encrypt'
+app/controllers/messages_controller.rb:39:in `encryptMessages'
+Started POST "/rsas/12/encrypt_messages?message=hello" for 127.0.0.1 at 2018-01-27 06:21:25 -0800
+Processing by MessagesController#encryptMessages as */*
+  Parameters: {"message"=>"hello", "id"=>"12"}
+Can't verify CSRF token authenticity.
+  [1m[36mRsa Load (0.5ms)[0m  [1m[34mSELECT  "rsas".* FROM "rsas" WHERE "rsas"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.8ms)
+
+
+  
+TypeError (nil can't be coerced into Fixnum):
+  
+app/controllers/messages_controller.rb:31:in `**'
+app/controllers/messages_controller.rb:31:in `block in encrypt'
+app/controllers/messages_controller.rb:29:in `loop'
+app/controllers/messages_controller.rb:29:in `encrypt'
+app/controllers/messages_controller.rb:39:in `encryptMessages'
+Started POST "/rsas/?n=3233" for 127.0.0.1 at 2018-01-27 06:21:41 -0800
+Processing by RsasController#create as */*
+  Parameters: {"n"=>"3233"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.0ms)[0m  [1m[32mINSERT INTO "rsas" ("n", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["n", 3233], ["created_at", "2018-01-27 14:21:41.236163"], ["updated_at", "2018-01-27 14:21:41.236163"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/rsas/13
+Completed 302 Found in 26ms (ActiveRecord: 8.6ms)
+
+

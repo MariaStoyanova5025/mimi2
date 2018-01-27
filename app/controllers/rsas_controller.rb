@@ -99,6 +99,7 @@ end
 			arr = new_key()
 			@rsa = Rsa.new({n:arr[0], e:arr[1], n:arr[2]})
 		end
+		p rsa
 		@rsa.save
 		respond_to do |format| 
         		format.json {render json: {'id' => @rsa.id}}
@@ -158,6 +159,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rsa_params
-      params.require(:rsa).permit(:n, :e, :d)
+      params.permit(:n, :e, :d)
     end
 end
