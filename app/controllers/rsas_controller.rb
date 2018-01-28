@@ -99,7 +99,7 @@ end
 			arr = new_key()
 			@rsa = Rsa.new({n:arr[0], e:arr[1], d:arr[2]})
 		end
-		p rsa
+		
 		@rsa.save
 		respond_to do |format| 
         		format.json {render json: {'id' => @rsa.id}}
