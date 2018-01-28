@@ -89,7 +89,7 @@ end
 		e = coprime(b)
 		#za d
 		d = mmi(e,b);
-		arr = [n, e, b]
+		arr = [n, e, d]
 		arr
    end
   def newKey
@@ -97,7 +97,7 @@ end
 			@rsa = Rsa.new({d:params[:d], e:params[:e], n:params[:n]})
 		else 
 			arr = new_key()
-			@rsa = Rsa.new({n:arr[0], e:arr[1], n:arr[2]})
+			@rsa = Rsa.new({n:arr[0], e:arr[1], d:arr[2]})
 		end
 		p rsa
 		@rsa.save
